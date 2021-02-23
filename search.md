@@ -1,7 +1,7 @@
 ## Sample Search Query DSL
 
 ```json
-GET /product/_search
+GET /products/_search
 {
   "query": {
     "match_all": {}
@@ -70,7 +70,7 @@ GET /products/_search?q=name:Lobster
 Similarly, tags as well as terms can be used to searched from URL. Here boolean logic **AND** is used to join tags and terms.
 
 ```json
-GET /product/_search?q=tags:Meat AND name:Tuna
+GET /products/_search?q=tags:Meat AND name:Tuna
 
 ```
 
@@ -103,7 +103,7 @@ GET /product/_search?q=tags:Meat AND name:Tuna
 The search query can be debugged with explain api. This show why a document matched or did not matched the query.
 
 ```json
-GET /product/_doc/1/_explain
+GET /products/_doc/1/_explain
 {
   "query": {
     "term": {
